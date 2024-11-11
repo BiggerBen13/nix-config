@@ -54,17 +54,6 @@
     (pkgs.nerdfonts.override {fonts = ["IosevkaTermSlab"];})
   ];
 
-  homebrew = {
-    enable = true;
-    casks = [
-      "logisim-evolution"
-      "xonotic"
-    ];
-    onActivation.cleanup = "zap";
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
-  };
-
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   # nix.package = pkgs.nix;
@@ -74,10 +63,6 @@
 
   programs.zsh.enable = true;
   programs.fish.enable = true;
-  services.skhd.enable = true;
-  services.skhd.package = pkgs.skhd;
-  services.yabai.enable = true;
-  services.yabai.package = pkgs.yabai;
 
   # Set Git commit hash for darwin-version.
   # system.configurationRevision = self.rev or self.dirtyRev or null;

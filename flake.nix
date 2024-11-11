@@ -18,15 +18,23 @@
         darwin_hosts = {
             darwin-powerbookpro = import ./hosts/darwin-powerbookpro (args // {system = "aarch64-darwin";});
         };
-
         darwin_host_values = builtins.attrValues darwin_hosts;
 
-    in
-        {
+        allSystemNames = [
+            "aarch64-darwin"
+        ];
+
+
+    forAllSystems = func: (nixpkgs.lib.genAttrs allSystemNames func);
+    in {
         nixpkgs.overlays = [
             overlays.unstable
         ];
 
         darwinConfigurations = lib.attrsets.mergeAttrsList (map (host: host.darwinConfigurations ) darwin_host_values);
+
+        formatter = forAllSystems (
+            system: nixpkgs.legacyPackages.${system}.alejandra
+            );
     };
 }

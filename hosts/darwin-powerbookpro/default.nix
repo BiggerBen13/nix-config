@@ -3,7 +3,7 @@ let
     name = "powerbookpro";
 
     specialArgs = {
-        inherit inputs overlays;
+        inherit name inputs overlays system;
     };
 
     modules = [

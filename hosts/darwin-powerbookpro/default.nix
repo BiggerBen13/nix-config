@@ -1,4 +1,4 @@
-{inputs, system, overlays, ...} @ args:
+{inputs, system, overlays, ...}:
 let 
     name = "powerbookpro";
 
@@ -26,7 +26,4 @@ in
         inherit system specialArgs modules;
     };
 
-        # darwinPackages = inputs.nix-darwin.darwinConfigurations.${name}.pkgs;
  }
-
-        # Expose the package set, including overlays, for convenience.

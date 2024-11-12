@@ -1,4 +1,8 @@
-{pkgs, ...} @ args: {
+{
+  myvars,
+  pkgs,
+  ...
+} @ args: {
   nix.package = pkgs.nixVersions.latest;
 
   environment.systemPackages = with pkgs; [
@@ -35,5 +39,11 @@
 
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
+
+    trusted-users = [myvars.username];
+  };
+
+  users.users.${myvars.username} = {
+    description = myvars.userfullanme;
   };
 }

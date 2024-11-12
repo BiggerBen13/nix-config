@@ -4,11 +4,14 @@
   ...
 } @ inputs: let
   inherit (inputs.nixpkgs) lib;
+  myvars = import ../vars {inherit lib;};
 
   genSpecialArgs = system:
     inputs
     // {
-      pkgs-unstable = import inputs.nixpkgs-unsable {
+      inherit myvars;
+
+      pkgs-unstable = import inputs.nixpkgs-unstable {
         inherit system;
       };
 
@@ -17,7 +20,7 @@
       };
     };
 
-  args = {inherit inputs lib genSpecialArgs;};
+  args = {inherit inputs lib myvars genSpecialArgs;};
 
   darwinSystems = {
     aarch64-darwin = import ./aarch64-darwin (args // {system = "aarch64-darwin";});
@@ -25,7 +28,7 @@
   darwinSystemValues = builtins.attrValues darwinSystems;
 
   nixosSystems = {};
-  nixosSystemVales = builtins.attrValues nixosSystems;
+  nixosSystemValues = builtins.attrValues nixosSystems;
 
   allSystems = darwinSystems // nixosSystems;
   allSystemNames = builtins.attrNames allSystems;

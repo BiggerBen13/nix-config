@@ -1,6 +1,8 @@
 {
   lib,
   inputs,
+  home-modules ? [],
+  myvars,
   darwin-modules,
   system,
   genSpecialArgs,
@@ -14,8 +16,22 @@ in
     modules =
       darwin-modules
       ++ [
-        ({lib, ...}: {
-          nixpkgs.pkgs = import nixpkgs-darwin {inherit system;};
-        })
-      ];
+        #        ({lib, ...}: {
+        #          nixpkgs.pkgs = import nixpkgs-darwin {inherit system;};
+        #        })
+      ]
+      ++ (lib.optionals ((lib.lists.length home-modules) > 0)
+        [
+          home-manager.darwinModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "home-manager.backup";
+
+              extraSpecialArgs = specialArgs;
+              users."${myvars.username}".imports = home-modules;
+            };
+          }
+        ]);
   }

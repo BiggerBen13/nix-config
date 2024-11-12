@@ -7,7 +7,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/release-24.05";
     nixpkgs-darwin.url = "github:NixOs/nixpkgs/nixpkgs-24.05-darwin";
     nix-darwin.url = "github:LnL7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
     home-manager = {

@@ -1,6 +1,7 @@
 {
   myvars,
   pkgs,
+  pkgs-stable,
   ...
 } @ args: {
   nix.package = pkgs.nixVersions.latest;

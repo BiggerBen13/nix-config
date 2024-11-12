@@ -6,7 +6,7 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
-    neovim
+    pkgs-unstable.neovim
     git
     fish
 

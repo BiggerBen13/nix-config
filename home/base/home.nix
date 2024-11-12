@@ -1,6 +1,5 @@
 {myvars, ...}: {
   home = {
-    # homeDirectory = /Users/biggerben;
     inherit (myvars) username;
     stateVersion = "24.05";
   };

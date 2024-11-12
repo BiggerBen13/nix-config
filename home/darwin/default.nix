@@ -1,9 +1,5 @@
-{
-  mylib,
-  myvars,
-  ...
-}: {
-  home.homeDirectory = "/Users/biggerben";
+{myvars, ...}: {
+  home.homeDirectory = "/Users/${myvars.username}";
   imports =
     [
       ./apps.nix

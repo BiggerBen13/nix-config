@@ -22,6 +22,8 @@
     caddy
     croc
     # ncdu
+
+    tmux
   ];
 
   programs = {

@@ -3,7 +3,7 @@ return {
     opts = {
         formatters_by_ft = {
             c = { "clang_format" },
-            nix = { "nix fmt" },
+            nix = { "alejandra" },
             typst = { "typstfmt" },
         },
         default_format_opts = {

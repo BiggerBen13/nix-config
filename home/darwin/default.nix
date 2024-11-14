@@ -3,6 +3,7 @@
   imports =
     [
       ./apps.nix
+      ./browsers.nix
     ]
     ++ [
       ../base/home.nix

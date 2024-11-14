@@ -1,5 +1,6 @@
 {...}: {
   imports = [
     ./editors
+    ./apps.nix
   ];
 }

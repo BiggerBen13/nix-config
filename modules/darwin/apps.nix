@@ -37,7 +37,13 @@
     casks = [
       "logisim-evolution"
       "xonotic"
+      "freecad"
+      "kicad"
+      "firefox"
+      "librewolf"
     ];
+
+    taps = [];
   };
 
   services.skhd.enable = true;

@@ -6,8 +6,7 @@
   ...
 }: {
   home.activation.installNvimConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    rm -rf ${config.xdg.configHome}/nvim
-    ln -s ${./.}/nvim ${config.xdg.configHome}/nvim
+    rm -rf ${config.xdg.configHome}/nvim && ln -s ${./.}/nvim ${config.xdg.configHome}/nvim
   ''; # --chmod=D255,F745
   # ${pkgs.rsync}/bin/rsync -avz  ${./nvim}/ ${config.xdg.configHome}/nvim/
 

@@ -1,3 +1,0 @@
-[submodule "home/base/tui/editors/neovim/nvim"]
-	path = home/base/tui/editors/neovim/nvim
-	url = https://github.com/BiggerBen13/nvim-config.git

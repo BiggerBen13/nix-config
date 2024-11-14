@@ -5,7 +5,7 @@
   pkgs-unstable,
   ...
 }: let
-  currentPath = builtins.toString ./.;
+  currentPath = ./.;
 in {
   home.activation.installNvimConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
     rm -rf ${config.xdg.configHome}/nvim && ln -s ${currentPath}/nvim ${config.xdg.configHome}/nvim

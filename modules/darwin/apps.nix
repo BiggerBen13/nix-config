@@ -46,10 +46,16 @@
     taps = [];
   };
 
-  services.skhd.enable = true;
-  services.skhd.package = pkgs.skhd;
-  services.yabai.enable = true;
-  services.yabai.package = pkgs.yabai;
+  services = {
+    skhd = {
+      enable = true;
+      package = pkgs.skhd;
+    };
+    yabai = {
+      enable = true;
+      package = pkgs.yabai;
+    };
+  };
 
   programs.zsh.enable = true;
   programs.fish.enable = true;

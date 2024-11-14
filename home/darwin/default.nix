@@ -4,6 +4,8 @@
     [
       ./apps.nix
       ./browsers.nix
+      ./skhd
+      ./yabai
     ]
     ++ [
       ../base/home.nix

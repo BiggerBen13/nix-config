@@ -37,5 +37,8 @@
       #-Zig
       zig
       zls
+
+      pkgs-unstable.tinymist
+      pkgs-unstable.typst
     ];
 }

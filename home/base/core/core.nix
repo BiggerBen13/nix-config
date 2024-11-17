@@ -24,6 +24,8 @@
     # ncdu
 
     tmux
+
+    qemu
   ];
 
   programs = {

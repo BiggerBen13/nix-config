@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  nix.settings.system-features = ["apple-virt"];
+
   security.pam.enableSudoTouchIdAuth = true;
 
   time.timeZone = "Europe/Berlin";

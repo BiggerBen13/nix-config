@@ -4,5 +4,6 @@
     ./core.nix
     ./shells
     ./editors
+    ./virtualisation.nix
   ];
 }

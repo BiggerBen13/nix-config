@@ -14,7 +14,7 @@
       ../../../secrets/darwin.nix
     ];
     home-modules = [
-      # ../../../home/darwin
+      ../../../home/darwin
       # ../../../hosts/darwin-${name}/home.nix
     ];
   };

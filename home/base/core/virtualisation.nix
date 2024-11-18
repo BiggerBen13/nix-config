@@ -9,4 +9,8 @@
     libvirt
     virt-manager
   ];
+
+  virtualisation.libvirtd = {
+    enable = true;
+  };
 }

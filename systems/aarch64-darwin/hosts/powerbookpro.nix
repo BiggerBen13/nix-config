@@ -11,10 +11,10 @@
   modules = {
     darwin-modules = [
       ../../../modules/darwin
+      ../../../secrets/darwin.nix
     ];
     home-modules = [
       ../../../home/darwin
-      ../../../secrets/darwin.nix
       # ../../../hosts/darwin-${name}/home.nix
     ];
   };

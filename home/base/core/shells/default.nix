@@ -10,7 +10,7 @@ in {
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    bashrcExtra = ''export PATH=$PATH:${localBin}:${rustBin}:brewBin'';
+    bashrcExtra = ''export PATH=$PATH:${localBin}:${rustBin}:${brewBin}'';
   };
 
   # programs.fish.shellInit = ''set PATH $PATH'';

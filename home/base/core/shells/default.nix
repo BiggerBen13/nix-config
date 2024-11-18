@@ -13,5 +13,5 @@ in {
     bashrcExtra = ''export PATH=$PATH:${localBin}:${rustBin}:${brewBin}'';
   };
 
-  # programs.fish.shellInit = ''set PATH $PATH'';
+  programs.fish.shellInit = ''set PATH $PATH ${localBin}:${rustBin}:${brewBin}'';
 }

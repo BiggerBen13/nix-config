@@ -32,9 +32,6 @@
       "gnu-tar"
       "gnu-sed"
       "m-cli"
-      "qemu"
-      "virt-manager"
-      "libvirt"
     ];
 
     casks = [

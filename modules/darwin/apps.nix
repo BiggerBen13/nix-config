@@ -3,6 +3,7 @@
   lib,
   pkgs,
   pkgs-unstable,
+  myvars,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -20,8 +21,6 @@
   };
 
   homebrew = {
-    enable = true;
-
     onActivation = {
       cleanup = "zap";
       autoUpdate = true;
@@ -49,8 +48,6 @@
       "firefox"
       "librewolf"
     ];
-
-    taps = [];
   };
 
   services = {

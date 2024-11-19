@@ -23,7 +23,7 @@
         rm -rf /Applications/Nix\ Apps
         mkdir -p /Applications/Nix\ Apps
         find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
-        while read src; do
+        while read -r src; do
         app_name=$(basename "$src")
         echo "copying $src" >&2
         ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
@@ -35,7 +35,7 @@
     '';
 
     defaults = {
-      menuExtraClock = true;
+      # menuExtraClock = true;
       dock = {
         autohide = true;
         show-recents = false;
@@ -46,9 +46,9 @@
       finder = {
         _FXShowPosixPathInTitle = true;
         AppleShowAllExtensions = true;
-        FXEnableExtensionsChangeWarning = false;
+        FXEnableExtensionChangeWarning = false;
         QuitMenuItem = true;
-        ShowPathBar = true;
+        ShowPathbar = true;
         ShowStatusBar = true;
       };
 
@@ -65,7 +65,7 @@
         ApplePressAndHoldEnabled = true; # enable press and hold
 
         # If you press and hold certain keyboard keys when in a text area, the key’s character begins to repeat.
-        # This is very useful for vim users, they use `hjkl` to move cursor.
+        # This is very useful for vim users, they use `hjkl` to move cursor.system
         # sets how long it takes before it starts repeating.
         InitialKeyRepeat = 15; # normal minimum is 15 (225 ms), maximum is 120 (1800 ms)
         # sets how fast it repeats once it starts.
@@ -141,15 +141,15 @@
         SHOWFULLNAME = true; # show full name in login window
       };
     };
+  };
 
-    fonts = {
-      packages = with pkgs; [
-        (nerdfonts.override {fonts = ["IosevkaTermSlab"];})
+  fonts = {
+    packages = with pkgs; [
+      (nerdfonts.override {fonts = ["IosevkaTermSlab"];})
 
-        # Icon fonts
-        material-design-icons
-        font-awesome
-      ];
-    };
+      # Icon fonts
+      material-design-icons
+      font-awesome
+    ];
   };
 }

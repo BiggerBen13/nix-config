@@ -20,5 +20,5 @@ in {
     envExtra = "export ${pathExtra}";
   };
 
-  programs.fish.shellInit = ''set PATH $PATH ${localBin} ${rustBin} ${brewBin}'';
+  # programs.fish.shellInit = ''set PATH $PATH ${localBin} ${rustBin} ${brewBin}'';
 }

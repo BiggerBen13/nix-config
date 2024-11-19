@@ -24,7 +24,7 @@ in
         nix-homebrew.darwinModules.nix-homebrew
         {
           nix-homebrew = {
-            # enable = true;
+            enable = true;
             enableRosetta = false;
 
             user = "${myvars.username}";

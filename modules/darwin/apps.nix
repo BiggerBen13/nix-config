@@ -32,6 +32,13 @@
       "gnu-tar"
       "gnu-sed"
       "m-cli"
+      {
+        name = "libvirt";
+        restart_service = "changed";
+        link = true;
+      }
+      "qemu"
+      "virt-manager"
     ];
 
     casks = [

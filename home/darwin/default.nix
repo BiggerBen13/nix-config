@@ -5,6 +5,7 @@
       ./apps.nix
       ./browsers.nix
       ./skhd
+      ./shells
       ./yabai
     ]
     ++ [

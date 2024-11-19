@@ -29,6 +29,8 @@ in
 
             user = "${myvars.username}";
 
+            autoMigrate = true;
+
             # taps = {};
           };
         }

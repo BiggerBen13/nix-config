@@ -51,7 +51,6 @@
       "librewolf"
     ];
   };
-
   services = {
     skhd = {
       enable = true;
@@ -61,10 +60,6 @@
     #   enable = true;
     #   package = pkgs.yabai;
     # };
-    aerospace = {
-      enable = true;
-      package = pkgs-unstable.aerospace;
-    };
   };
 
   programs.zsh.enable = true;

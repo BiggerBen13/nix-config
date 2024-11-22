@@ -57,9 +57,13 @@
       enable = true;
       package = pkgs.skhd;
     };
-    yabai = {
+    # yabai = {
+    #   enable = true;
+    #   package = pkgs.yabai;
+    # };
+    aerospace = {
       enable = true;
-      package = pkgs.yabai;
+      package = pkgs-unstable.aerospace;
     };
   };
 

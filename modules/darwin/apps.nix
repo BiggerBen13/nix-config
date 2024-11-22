@@ -52,14 +52,18 @@
     ];
   };
   services = {
-    skhd = {
-      enable = true;
-      package = pkgs.skhd;
-    };
+    # skhd = {
+    #   enable = true;
+    #   package = pkgs.skhd;
+    # };
     # yabai = {
     #   enable = true;
     #   package = pkgs.yabai;
     # };
+    aerospace = {
+      enable = true;
+      package = pkgs-unstable.aerospace;
+    };
   };
 
   programs.zsh.enable = true;

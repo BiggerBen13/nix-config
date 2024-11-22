@@ -13,6 +13,7 @@
 
     # Gonna try this out, maybe it's cool
     utm
+    pkgs-unstable.aerospace
   ];
 
   environment.variables = {
@@ -60,10 +61,10 @@
     #   enable = true;
     #   package = pkgs.yabai;
     # };
-    aerospace = {
-      enable = true;
-      package = pkgs-unstable.aerospace;
-    };
+    # aerospace = {
+    #   enable = true;
+    #   package = pkgs-unstable.aerospace;
+    # };
   };
 
   programs.zsh.enable = true;

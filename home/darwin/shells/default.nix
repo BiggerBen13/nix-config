@@ -17,7 +17,7 @@ in {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    envExtra = "export ${pathExtra}";
+    envExtra = "${pathExtra}";
   };
 
   programs.nushell = {

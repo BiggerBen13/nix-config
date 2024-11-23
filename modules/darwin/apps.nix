@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     pkgs-unstable.neovim
     git
-    fish
+    # fish
 
     # Gonna try this out, maybe it's cool
     utm

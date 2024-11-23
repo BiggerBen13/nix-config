@@ -12,5 +12,6 @@
       ../base/home.nix
       ../base/tui
       ../base/core
+      ../base/gui
     ];
 }

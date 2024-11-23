@@ -3,21 +3,22 @@
   pkgs-unstable,
   ...
 }: let
-  localBin = "${config.home.homeDirectory}/.local/bin";
+  # localBin = "${config.home.homeDirectory}/.local/bin";
   rustBin = "${config.home.homeDirectory}/.cargo/bin";
-  brewBin = "/opt/homebrew/bin:/usr/local/bin";
-  pathExtra = "${localBin}:${rustBin}:${brewBin}";
+  brewBin = "/opt/homebrew/bin";
+  envExtra = "${rustBin}\n${brewBin}";
 in {
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    bashrcExtra = ''export PATH=$PATH:${localBin}:${rustBin}:${brewBin}'';
+    bashrcExtra = "export PATH=$PATH:${rustBin}:${brewBin}";
   };
 
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    envExtra = "${pathExtra}";
+    initExtra = "export PATH=$PATH:${rustBin}:${brewBin}";
+    # inherit envExtra;
   };
 
   programs.nushell = {

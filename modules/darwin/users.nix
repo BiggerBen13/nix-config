@@ -5,6 +5,6 @@
 }: {
   users.users."${myvars.username}" = {
     home = "/Users/${myvars.username}";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
 }

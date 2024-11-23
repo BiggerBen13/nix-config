@@ -20,5 +20,10 @@ in {
     envExtra = "export ${pathExtra}";
   };
 
+  programs.nushell = {
+    enable = true;
+    configFile.source = ./config.nu;
+  };
+
   # programs.fish.shellInit = ''set PATH $PATH ${localBin} ${rustBin} ${brewBin}'';
 }

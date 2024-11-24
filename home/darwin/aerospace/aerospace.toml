@@ -171,4 +171,4 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [mode.app.binding]
-t = exec-and-forget ['open -a Kitty.app','mode main']
+alt-t = exec-and-forget ['open -a Kitty.app','mode main']

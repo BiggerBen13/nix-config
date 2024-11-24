@@ -68,5 +68,9 @@
   };
 
   programs.zsh.enable = true;
+  environment.shells = [
+    pkgs.zsh
+    pkgs-unstable.nushell
+  ];
   # programs.fish.enable = true;
 }

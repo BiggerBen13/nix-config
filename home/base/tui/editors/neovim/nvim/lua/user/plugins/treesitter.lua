@@ -12,6 +12,7 @@ return {
         "zig",
         "markdown",
         "nix",
+        "nu",
     },
     config = function() require"user.plugins.config.treesitter" end
 }

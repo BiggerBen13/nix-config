@@ -12,7 +12,8 @@ local servers = {
     markdown_oxide = {},
     wgsl_analyzer = {},
     tinymist = require "user.plugins.config.lsps.tinymist",
-    nil_ls = {}
+    nil_ls = {},
+    nushell = {}
 }
 
 local M = {}

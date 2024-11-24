@@ -5,11 +5,13 @@
   pkgs-unstable,
   ...
 }: let
+  nvimPath = "${config.home.homeDirectory}/nix/home/base/tui/editors/neovim/nvim";
 in {
-  home.activation.installNvimConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    rm -rf ${config.xdg.configHome}/nvim && ln -s ${./nvim} ${config.xdg.configHome}/nvim
-  ''; # --chmod=D255,F745
+  # home.activation.installNvimConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  #   rm -rf ${config.xdg.configHome}/nvim && ln -s ${./nvim} ${config.xdg.configHome}/nvim
+  # ''; # --chmod=D255,F745
   # ${pkgs.rsync}/bin/rsync -avz  ${./nvim}/ ${config.xdg.configHome}/nvim/
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
 
   programs = {
     neovim = {

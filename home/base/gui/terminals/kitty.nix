@@ -5,6 +5,7 @@
 }: {
   programs.kitty = {
     enable = true;
+    themeFile = "gruvbox-dark";
     font = {
       name = "IosevkaTermSlab Nerd Font Mono";
       size = 20;
@@ -29,6 +30,7 @@
       # MacOS Tweaks
       macos_option_as_alt = true;
       macos_quit_when_last_window_closed = true;
+      shell = "${pkgs.bash}/bin/bash --login -c 'nu --login --interactive'";
     };
   };
 }

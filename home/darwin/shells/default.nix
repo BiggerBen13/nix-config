@@ -24,6 +24,7 @@ in {
   programs.nushell = {
     enable = true;
     configFile.source = ./config.nu;
+    envFile.source = ./env.nu;
   };
 
   # programs.fish.shellInit = ''set PATH $PATH ${localBin} ${rustBin} ${brewBin}'';

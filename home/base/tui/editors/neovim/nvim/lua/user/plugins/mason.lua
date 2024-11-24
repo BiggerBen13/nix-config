@@ -16,6 +16,7 @@ return {
         "wgsl",
         "html",
         "css",
+        "nu",
     },
     config = function() require "user.plugins.config.mason" end,
     dependencies = {

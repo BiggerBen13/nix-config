@@ -7,6 +7,7 @@
       # ./skhd
       ./shells
       # ./yabai
+      ./aerospace
     ]
     ++ [
       ../base/home.nix

@@ -15,6 +15,6 @@ def commit-generation [note?: string] {
 def darwin-switch [note?: string] {
     git diff -U0
     nix fmt
-    # darwin-rebuild --flake ~/nix --switch
+    darwin-rebuild switch --flake ~/nix
     commit-generation $note
 }

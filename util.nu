@@ -9,7 +9,7 @@ def commit-generation [note?: string] {
         | split column --regex '\s+' generation date time current
     let current_generation = $generations | where current? != null
     let message = $"GEN: ($current_generation.generation) on: ($current_generation.date) at: ($current_generation.time)" + " " + $note
-   git commit -am message
+   git commit -am $message
 }
 
 def darwin-switch [note?: string] {

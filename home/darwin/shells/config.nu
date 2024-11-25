@@ -3,6 +3,6 @@ def fw [] {
 }
 
 $env.config = {
-    edit_mode: vim
-    table_mode: heavy
+    edit_mode: vi
+    table.mode: heavy
 }

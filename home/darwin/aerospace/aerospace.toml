@@ -138,6 +138,8 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
+ctrl-alt-shift-f =  ['exec-and-forget kitty nu -l -c fw','mode main']
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # Modes
 alt-shift-semicolon = 'mode service'
@@ -160,7 +162,7 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [mode.apps.binding]
-alt-t =  ['exec-and-forget open -a Kitty.app','mode main']
+alt-enter = ['exec-and-forget open -a Kitty', 'mode main']
 
 [workspace-to-monitor-force-assignment]
 1 = 'main'

@@ -1,8 +1,7 @@
 def fw [] {
-    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {2}")+abort'
+    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
 }
 
 $env.config = {
     edit_mode: vi
-    table.mode: heavy
 }

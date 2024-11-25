@@ -7,5 +7,7 @@
 
   nix.gc.automatic = false;
 
+  nix.linux-builder.enable = true;
+
   system.stateVersion = 5;
 }

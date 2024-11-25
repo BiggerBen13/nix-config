@@ -152,7 +152,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # Modes
 alt-shift-semicolon = 'mode service'
-alt-shift-a = 'mode app'
+alt-shift-a = 'mode apps'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -170,5 +170,5 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-[mode.app.binding]
-alt-t = exec-and-forget ['open -a Kitty.app','mode main']
+[mode.apps.binding]
+alt-t =  ['exec-and-forget open -a Kitty.app','mode main']

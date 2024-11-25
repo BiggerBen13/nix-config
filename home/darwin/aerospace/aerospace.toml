@@ -45,6 +45,10 @@ automatically-unhide-macos-hidden-apps = false
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
+
+[exec.env-vars]
+PATH = '/Users/biggerben/.nix-profile/bin:/etc/profiles/per-user/biggerben/bin:/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/biggerben/.cargo/bin:/opt/homebrew/bin:/Users/biggerben/.cargo/bin:/opt/homebrew/bin'
+
 [key-mapping]
 preset = 'qwerty'
 
@@ -138,7 +142,7 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-ctrl-alt-shift-f =  ['exec-and-forget kitty nu -l -c fw','mode main']
+ctrl-alt-shift-f = 'exec-and-forget kitty nu -l -c fw'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # Modes

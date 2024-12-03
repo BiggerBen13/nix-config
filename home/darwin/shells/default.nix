@@ -27,5 +27,9 @@ in {
     envFile.source = ./env.nu;
   };
 
+  programs.fish = {
+    enable = true;
+  };
+
   # programs.fish.shellInit = ''set PATH $PATH ${localBin} ${rustBin} ${brewBin}'';
 }

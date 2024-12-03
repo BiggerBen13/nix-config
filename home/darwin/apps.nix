@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    sioyek
+    # sioyek
     zathura
     inkscape
     # alacritty

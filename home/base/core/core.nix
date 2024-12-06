@@ -5,6 +5,7 @@
     gnumake
 
     fzf
+    carapace
 
     fd
 

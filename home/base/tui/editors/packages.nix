@@ -22,6 +22,7 @@
       gnumake
       checkmake
       gcc
+      lld
       # gdb
       llvmPackages.clang-unwrapped
       lldb

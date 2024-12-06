@@ -27,7 +27,7 @@ in {
     envFile.source = ./env.nu;
     extraConfig = ''
       source ${./custom_commands.nu}
-      use ${./tmux-sessionizer.nu} *
+      use ${./tmux-sessionizer.nu}/tmux-sessionizer *
       use ${../../../util.nu} *
     '';
   };

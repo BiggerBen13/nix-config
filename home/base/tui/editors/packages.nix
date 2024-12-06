@@ -33,6 +33,7 @@
       pkgs-unstable.cargo
       pkgs-unstable.rustfmt
       pkgs-unstable.clippy
+      dioxus-cli
 
       #-Zig
       zig

@@ -1,4 +1,4 @@
-def commit-generation [note?: string] {
+export def commit-generation [note?: string] {
     let note = (match $note {
         null => {""},
         _ => {$"note: ($note)"}
@@ -12,7 +12,7 @@ def commit-generation [note?: string] {
    git commit -am $message
 }
 
-def darwin-switch [note?: string] {
+export def darwin-switch [note?: string] {
     git diff -U0
     nix fmt
     darwin-rebuild switch --flake ~/nix

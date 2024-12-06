@@ -8,7 +8,7 @@ def get_tmux [] {
         default null
 }
 
-export def get_project_dirs [] {
+export def get-project-dirs [] {
     let project_dirs = [ '~/projects', '~/.config' ]
     let out = ($project_dirs | 
         each {||
@@ -25,8 +25,8 @@ export def get_project_dirs [] {
     return $out
 }
 
-export def main [] {
-    let selected_project = get_project_dirs |
+export def tmux-sessionizer [] {
+    let selected_project = get-project-dirs |
                            str join "\n" | 
                            fzf
 

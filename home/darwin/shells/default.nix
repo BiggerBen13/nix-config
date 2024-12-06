@@ -25,6 +25,9 @@ in {
     enable = true;
     configFile.source = ./config.nu;
     envFile.source = ./env.nu;
+    extraConfig = ''
+      source ${./custom_commands.nu}
+    '';
   };
 
   programs.fish = {
